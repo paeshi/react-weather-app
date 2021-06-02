@@ -10,7 +10,8 @@ function App () {
     lng: null,
     temp: null,
     icon: ''
-  })
+  })  
+  console.log(appData)
   
   async function getAppData() {
     // we need browser location
@@ -22,7 +23,8 @@ function App () {
     // ?lat=34.0475869&lon=-117.8985651&units=imperial&appid=
     const API_KEY='5b3c5a41e420b342a7d2e498f5e3fd82';
 
-    const weatherData= await fetch(`${BASE_URL}?lat=${lat}&lon=${lng}&units=imperial&appid=${API_KEY}`).then(response => response.json());console.log(weatherData)
+    const weatherData= await fetch(`${BASE_URL}?lat=${lat}&lon=${lng}&units=imperial&appid=${API_KEY}`).then(response => response.json());
+    // console.log(weatherData)
 
 
 
@@ -55,7 +57,7 @@ function App () {
       {
         appData.temp && <div>{appData.temp}&deg;</div>
       }
-      <h3 style={{padding: 15}}>REACT WEATHER</h3>
+      <h3>REACT WEATHER</h3>
       {appData.icon &&
       <img 
       src={`https://openweathermap.org/img/w/${appData.icon}.png`}

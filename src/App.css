@@ -12,8 +12,17 @@
   background-color: var(--primary-color);
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
   font-size: 5vmin;
   color: var(--text-color);
-  opacity: 0.85;
+  opacity: 0.9;
+}
+
+.App-header > img {
+  height: 20vmin;
+}
+.App-header div {
+  color: white;
+  font-size: 5vmin;
+  font-weight: bold;
 }
